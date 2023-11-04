@@ -1,5 +1,7 @@
 ﻿using Gielda_biblioteka;
 using Gielda_Biblioteka;
+using System.Diagnostics;
+
 namespace Gielda_Program
 {
     internal class Program
@@ -31,8 +33,6 @@ namespace Gielda_Program
             InstrumentFinansowy krypto2 = new Kryptowaluta("etherium", "ET", KrajEnum.All, BlockchainEnum.Etherium, new(2005, 5, 23));
             InstrumentFinansowy krypto3 = new Kryptowaluta("solana", "SO", KrajEnum.All, BlockchainEnum.Solana, new(2004, 7, 12));
 
-            
-
             InstrumentInfo i1 = new InstrumentInfoLimitowanyDostep(akcja1, DateTime.Now, 1000, 1000, JednostkaMiaryEnum.sztuka, 50);
             InstrumentInfo i2 = new InstrumentInfoLimitowanyDostep(akcja2, DateTime.Now, 1000, 1000, JednostkaMiaryEnum.sztuka, 100);
             InstrumentInfo i3 = new InstrumentInfoLimitowanyDostep(akcja3, DateTime.Now, 1000, 1000, JednostkaMiaryEnum.sztuka, 150);
@@ -48,7 +48,6 @@ namespace Gielda_Program
             InstrumentInfo i13 = new InstrumentInfoNieLimitowanyDostep(krypto1, DateTime.Now, 43555.32m);
             InstrumentInfo i14 = new InstrumentInfoNieLimitowanyDostep(krypto2, DateTime.Now, 13542.22m);
             InstrumentInfo i15 = new InstrumentInfoNieLimitowanyDostep(krypto3, DateTime.Now, 5695.62m);
-
 
 
             gielda.addInstrument(i1);
@@ -82,19 +81,50 @@ namespace Gielda_Program
 
             gielda.showAllUsers();
 
-            InstrumentTransakcja t1 = new InstrumentTransakcja();
 
-            InstrumentInfo info1 = gielda.findByInstrument(akcja1);
-            Console.WriteLine(info1.GetType());
-            Console.WriteLine(info1.ToString());
-            info1.info();
+            gielda.copyToInteface();
 
 
+            gielda.copyToInteface();
 
-            InstrumentInfo info2 = gielda.findByInstrument(waluta1);
-            Console.WriteLine(info2.GetType());
-            Console.WriteLine(info2.ToString());
+            Console.WriteLine("---------------------------------");
 
+            addTransaction(gielda, portfel1, akcja1);
+            addTransaction(gielda, portfel1, waluta3);
+            addTransaction(gielda, portfel1, obligacja2);
+            addTransaction(gielda, portfel1, surowiec1);
+            addTransaction(gielda, portfel1, krypto2);
+
+
+            Console.WriteLine(portfel1.ToString());
+
+        }
+
+            
+
+        public static void  addTransaction(Gielda gielda, Uzytkownik portfel, InstrumentFinansowy instrFinansowy)
+        {
+            InstrumentInfoLimitowanyDostep lim;
+            InstrumentInfoNieLimitowanyDostep noLim;
+
+            if (instrFinansowy is Interface1)
+            {
+                lim = gielda.findLimitedInsrumentByInstrument(instrFinansowy);
+                InstrumentFinansowy instrumentFin = lim.Instrument;
+                decimal price = lim.Price;
+
+                InstrumentTransakcja t1 = new InstrumentTransakcja(instrumentFin, price, 20, DateTime.Now);
+                ((Portfel)portfel).addTransaction(t1);
+            }
+            else if (instrFinansowy is Interface2)
+            {
+                noLim = gielda.findNoLimitedInsrumentByInstrument(instrFinansowy);
+                InstrumentFinansowy instrumentFin = noLim.Instrument;
+                decimal exchangeRateToUSD = noLim.ExchangeRateToUSD;
+                USD usd = new USD();
+                InstrumentTransakcja t1 = new InstrumentTransakcja(instrumentFin, exchangeRateToUSD * usd.Value, 20, DateTime.Now);
+                ((Portfel)portfel).addTransaction(t1);
+            }
         }
     }
 }

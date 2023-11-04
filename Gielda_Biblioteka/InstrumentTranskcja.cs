@@ -46,5 +46,9 @@ namespace Gielda_Biblioteka
 			set { _instrument = value; }
 		}
 
-	}
+        public override string ToString()
+        {
+            return _instrument.ToString() + $"Cena zakupu: {_purchasePrice}, Ilość: {_amount}, Data zakupu: {_purchaseDate} \n";
+        }
+    }
 }

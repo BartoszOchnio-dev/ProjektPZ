@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gielda_Biblioteka
 {
-    public class InstrumentInfoNieLimitowanyDostep: InstrumentInfo 
+    public class InstrumentInfoNieLimitowanyDostep: InstrumentInfo, Interface2
     {
         private decimal _exchangeRateToUSD;
 
@@ -27,5 +27,6 @@ namespace Gielda_Biblioteka
         {
             return base.ToString() + $"Kurs względem dolara: {_exchangeRateToUSD}\n";
         }
+
     }
 }

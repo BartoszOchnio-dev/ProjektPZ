@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gielda_biblioteka
 {
-    public class Waluta : InstrumentFinansowy
+    public class Waluta : InstrumentFinansowy, Interface2
     {
 		private KrajEnum _country;
 		

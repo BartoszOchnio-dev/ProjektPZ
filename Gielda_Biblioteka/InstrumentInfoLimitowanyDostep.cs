@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Gielda_Biblioteka
 {
-    public class InstrumentInfoLimitowanyDostep : InstrumentInfo
+    public class InstrumentInfoLimitowanyDostep : InstrumentInfo, Interface1
     {
         private int _availableQuantity;
         private int _producedQuantity;
@@ -56,5 +56,7 @@ namespace Gielda_Biblioteka
         {
             Console.WriteLine("Metoda po natpisaniu - Działa");
         }
+
     }
+
 }

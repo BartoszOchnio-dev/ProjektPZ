@@ -27,7 +27,17 @@ namespace Gielda_Biblioteka
         {
             _instruments.Add(instrument);
         }
-        
 
-	}
+        public override string ToString()
+        {
+            string info = "";
+            foreach(InstrumentTransakcja t in _instruments)
+            {
+                info += t.ToString();
+            }
+            return info;
+        }
+
+
+    }
 }

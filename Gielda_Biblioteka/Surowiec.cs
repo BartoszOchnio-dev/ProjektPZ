@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gielda_biblioteka
 {
-    public class Surowiec : InstrumentFinansowy
+    public class Surowiec : InstrumentFinansowy, Interface1
     {
 
 		public Surowiec() { }

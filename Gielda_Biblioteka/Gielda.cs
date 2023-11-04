@@ -9,6 +9,9 @@ namespace Gielda_Biblioteka
     public class Gielda
     {
 		private List<InstrumentInfo> _instruments;
+		private List<Interface1> _interface1s = new List<Interface1>();
+		private List<Interface2> _interface2s = new List<Interface2>();
+
 		private List<Uzytkownik> _users;
 
 
@@ -58,17 +61,45 @@ namespace Gielda_Biblioteka
 			}
 		}
 
-		public InstrumentInfo findByInstrument(InstrumentFinansowy instrument)
+		public void copyToInteface()
 		{
-			foreach(InstrumentInfo info in _instruments)
+			_interface1s = new List<Interface1>();
+			_interface2s = new List<Interface2>();
+            foreach (InstrumentInfo info in _instruments)
+            {
+                if (info is Interface1)
+                {
+                    _interface1s.Add((Interface1)info);
+                }
+                if (info is Interface2)
+                {
+                    _interface2s.Add((Interface2)info);
+                }
+            }
+        }
+		public InstrumentInfoLimitowanyDostep findLimitedInsrumentByInstrument(InstrumentFinansowy instrument)
+		{
+			foreach(InstrumentInfoLimitowanyDostep inst in _interface1s)
 			{
-				if(info.Instrument == instrument)
+				if(inst.Instrument == instrument)
 				{
-					return info;
+					return inst;
 				}
 			}
 			return null;
 		}
+
+        public InstrumentInfoNieLimitowanyDostep findNoLimitedInsrumentByInstrument(InstrumentFinansowy instrument)
+        {
+            foreach (InstrumentInfoNieLimitowanyDostep inst in _interface2s)
+            {
+                if (inst.Instrument == instrument)
+                {
+                    return inst;
+                }
+            }
+            return null;
+        }
 
 
 

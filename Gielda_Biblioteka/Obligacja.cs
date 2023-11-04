@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gielda_biblioteka
 {
-    public class Obligacja : InstrumentFinansowy
+    public class Obligacja : InstrumentFinansowy, Interface1
     {
 
 		private decimal _interestRate;

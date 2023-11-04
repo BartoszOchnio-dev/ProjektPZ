@@ -10,7 +10,7 @@ namespace Gielda_biblioteka
     {
 		private decimal value = 1;
 
-		public decimal MyProperty
+		public decimal Value
 		{
 			get { return value = 1; }
 		}

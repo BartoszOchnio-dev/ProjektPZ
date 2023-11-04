@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gielda_biblioteka
 {
-    public class Akcja : InstrumentFinansowy
+    public class Akcja : InstrumentFinansowy, Interface1
     {
         private string _companyName;
         private decimal _dividend;
