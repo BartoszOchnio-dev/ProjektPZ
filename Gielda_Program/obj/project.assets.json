@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Gielda_Biblioteka/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Gielda_Biblioteka.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gielda_Biblioteka.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gielda_Biblioteka/1.0.0": {
+      "type": "project",
+      "path": "../Gielda_Biblioteka/Gielda_Biblioteka.csproj",
+      "msbuildProject": "../Gielda_Biblioteka/Gielda_Biblioteka.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Gielda_Biblioteka >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ochni\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ochni\\OneDrive\\Pulpit\\PZ\\Projekt\\Gielda_Biblioteka\\Gielda_Program\\Gielda_Program.csproj",
+      "projectName": "Gielda_Program",
+      "projectPath": "C:\\Users\\ochni\\OneDrive\\Pulpit\\PZ\\Projekt\\Gielda_Biblioteka\\Gielda_Program\\Gielda_Program.csproj",
+      "packagesPath": "C:\\Users\\ochni\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ochni\\OneDrive\\Pulpit\\PZ\\Projekt\\Gielda_Biblioteka\\Gielda_Program\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\ochni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\ochni\\OneDrive\\Pulpit\\PZ\\Projekt\\Gielda_Biblioteka\\Gielda_Biblioteka\\Gielda_Biblioteka.csproj": {
+              "projectPath": "C:\\Users\\ochni\\OneDrive\\Pulpit\\PZ\\Projekt\\Gielda_Biblioteka\\Gielda_Biblioteka\\Gielda_Biblioteka.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

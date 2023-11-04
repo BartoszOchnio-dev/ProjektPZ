@@ -1,0 +1,11 @@
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\bin\Debug\net6.0\Gielda_Biblioteka.deps.json
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\bin\Debug\net6.0\Gielda_Biblioteka.dll
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\bin\Debug\net6.0\Gielda_Biblioteka.pdb
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\Gielda_Biblioteka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\Gielda_Biblioteka.AssemblyInfoInputs.cache
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\Gielda_Biblioteka.AssemblyInfo.cs
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\Gielda_Biblioteka.csproj.CoreCompileInputs.cache
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\Gielda_Biblioteka.dll
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\refint\Gielda_Biblioteka.dll
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\Gielda_Biblioteka.pdb
+C:\Users\ochni\OneDrive\Pulpit\PZ\Projekt\Gielda_Biblioteka\Gielda_Biblioteka\obj\Debug\net6.0\ref\Gielda_Biblioteka.dll
