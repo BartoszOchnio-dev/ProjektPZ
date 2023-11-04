@@ -51,5 +51,10 @@ namespace Gielda_Biblioteka
         {
             return base.ToString() + $"Dostępna ilość: {_availableQuantity}; Wypuszczona ilość: {_producedQuantity}; Jednostka: {_measureUnit}; Cena: {_price}$ \n";
         }
+
+        public override void info()
+        {
+            Console.WriteLine("Metoda po natpisaniu - Działa");
+        }
     }
 }

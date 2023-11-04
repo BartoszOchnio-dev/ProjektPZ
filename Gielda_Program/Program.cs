@@ -80,9 +80,21 @@ namespace Gielda_Program
             gielda.addUser(portfel2);
             gielda.addUser(portfel3);
 
+            gielda.showAllUsers();
+
             InstrumentTransakcja t1 = new InstrumentTransakcja();
 
-            gielda.showAllUsers();
+            InstrumentInfo info1 = gielda.findByInstrument(akcja1);
+            Console.WriteLine(info1.GetType());
+            Console.WriteLine(info1.ToString());
+            info1.info();
+
+
+
+            InstrumentInfo info2 = gielda.findByInstrument(waluta1);
+            Console.WriteLine(info2.GetType());
+            Console.WriteLine(info2.ToString());
+
         }
     }
 }

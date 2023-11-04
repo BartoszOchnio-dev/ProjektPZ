@@ -57,5 +57,20 @@ namespace Gielda_Biblioteka
 				Console.WriteLine(user.ToString()); 
 			}
 		}
-	}
+
+		public InstrumentInfo findByInstrument(InstrumentFinansowy instrument)
+		{
+			foreach(InstrumentInfo info in _instruments)
+			{
+				if(info.Instrument == instrument)
+				{
+					return info;
+				}
+			}
+			return null;
+		}
+
+
+
+    }
 }

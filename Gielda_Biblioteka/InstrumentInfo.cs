@@ -40,6 +40,9 @@ namespace Gielda_Biblioteka
             return _instrument.ToString() +  $"Data aktualizacji: {_lastActualisation}\n";
         }
 
+        public virtual void info() {
+            Console.WriteLine("Klasa bazaowa - info");
+        }
 
     }
 }
